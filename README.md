@@ -1,4 +1,5 @@
 # Stockfish-Service
+This repository contains a RESTful service that provides a GET /get_best_move endpoint. The endpoint expects a FEN (Forsyth-Edwards Notation) string representing the current chessboard state and returns the best move according to the Stockfish chess engine. This service allows seamless integration of advanced chess move calculations into any application that interacts with chess game data.
 
 ## Installation
 
@@ -20,7 +21,8 @@
    python Stockfish-API.py
    ```
    This will start the FastAPI service on `http://0.0.0.0:8081`.
-
+   
+## Required Adjustments
 **Stockfish Path Configuration**:
 The project relies on Stockfish for chess move analysis, and it needs to know where the Stockfish executable is located. By default, the code will look for `stockfish` (or `stockfish.exe` on Windows). However, this assumes either:
 - The executable is in the same directory as the script.
